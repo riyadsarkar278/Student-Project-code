@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration System</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="navbar">
+
+    <div class="logo">
+      <i class="fa-solid fa-graduation-cap"></i>
+      Student Registration System
+    </div>
+
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="view.php">View Students</a>
+      <a href="#">About</a>
+
+      <a href="#" class="btn">
+        <i class="fa-solid fa-user-plus"></i>
+        Register Student
+      </a>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <div class="left-side">
+
+      <img src="Riyad.jpeg" class="project-photo">
+
+      <h2>Register New Student</h2>
+
+      <p>
+        Fill in the details to register
+        <br>
+        a new student.
+      </p>
+
+    </div>
+
+    <div class="right-side">
+
+      <form action="save.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+
+        <label>Full Name</label>
+
+        <div class="input-box">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" name="name" placeholder="Enter full name" required>
+        </div>
+
+        <label>Email Address</label>
+
+        <div class="input-box">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" name="email" placeholder="Enter email address" required>
+        </div>
+
+        <label>Course</label>
+
+        <div class="input-box">
+          <i class="fa-solid fa-book"></i>
+
+          <select name="course" required>
+            <option value="">Select Course</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Business">Business</option>
+            <option value="Mathematics">Mathematics</option>
+          </select>
+        </div>
+
+        <label>Phone Number</label>
+
+        <div class="input-box">
+          <i class="fa-solid fa-phone"></i>
+          <input type="text" name="phone" placeholder="Enter phone number">
+        </div>
+
+        <label>Student Photo</label>
+        <input type="file" name="photo">
+
+        <button type="submit">
+          <i class="fa-solid fa-user-plus"></i>
+          Register Student
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
